@@ -195,7 +195,6 @@ var question = {
   }
 ]
 }
-
 var slider = {
   type: jsPsychHtmlSliderResponse,
   slider_start: 1,
@@ -230,9 +229,10 @@ var slider = {
             </div>`;
   }
 };
+
 var conditional_slider = {
   timeline: [slider],
-  conditional_function: function(){
+  conditional_function: function() {
     var response = jsPsych.data.get().last().values()[0].response.Q0;
     if (response == "Patients have as much chance of recovery with the medicine as with the placebo") {
       return false;
@@ -240,7 +240,7 @@ var conditional_slider = {
       return true;
     }
   }
-}        
+};
 
 //question certi
 var confidence = {
