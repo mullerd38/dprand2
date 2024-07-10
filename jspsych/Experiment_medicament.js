@@ -202,22 +202,27 @@ var slider = {
   min: 1,
   max: 100,
   step: 1,
-  labels: ['1<br>Very small extent', '100<br>Very large extent'],
-  stimulus: function(){
+  labels: ['1', '25', '50', '75', '100'],
+  stimulus: function() {
     var response = jsPsych.data.get().last().values()[0].response.Q0;
-    if (response == "Patients have a better chance of recovery with the medicine"){
-      return "<p>To what extent do you think that people are more likely to get better with the medicine.</p>";
+    var questionText = "";
+    if (response == "Patients have a better chance of recovery with the medicine") {
+      questionText = "To what extent do you think that people are more likely to get better with the medicine.";
     } else if (response == "Patients have a better chance of recovery with the placebo") {
-      return "<p>To what extent do you think that people are more likely to get better with the placebo.</p>";
+      questionText = "To what extent do you think that people are more likely to get better with the placebo.";
     } else {
-      return "<p>Erreur : réponse inattendue.</p>";
+      questionText = "Erreur : réponse inattendue.";
     }
+
+    return `<div class="slider-container">
+              <p>${questionText}</p>
+            </div>`;
   }
-}
+};
 
 var conditional_slider = {
   timeline: [slider],
-  conditional_function: function(){
+  conditional_function: function() {
     var response = jsPsych.data.get().last().values()[0].response.Q0;
     if (response == "Patients have as much chance of recovery with the medicine as with the placebo") {
       return false;
@@ -225,7 +230,7 @@ var conditional_slider = {
       return true;
     }
   }
-}  
+};
 
 
 //question certi
