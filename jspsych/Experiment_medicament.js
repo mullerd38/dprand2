@@ -204,10 +204,10 @@ var slider = {
   max: 100,
   step: 1,
   labels: ['1', '25', '50', '75', '100'], // Placeholder labels for spacing
-  stimulus: function(){
+  stimulus: function() {
     var response = jsPsych.data.get().last().values()[0].response.Q0;
     var questionText = "";
-    if (response == "Patients have a better chance of recovery with the medicine"){
+    if (response == "Patients have a better chance of recovery with the medicine") {
       questionText = "To what extent do you think that people are more likely to get better with the medicine.";
     } else if (response == "Patients have a better chance of recovery with the placebo") {
       questionText = "To what extent do you think that people are more likely to get better with the placebo.";
@@ -218,14 +218,14 @@ var slider = {
     return `
       <div>
         <p>${questionText}</p>
-        <div class="slider-container" style="position: relative; width: 100%;">
-          <input type="range" min="1" max="100" value="1" step="1" id="slider" style="width: 100%;">
-          <div style="display: flex; justify-content: space-between; position: relative; top: -25px;">
-            <span style="width: 20%; text-align: center;">1<br>Very small extent</span>
-            <span style="width: 20%; text-align: center;">25<br>Small extent</span>
-            <span style="width: 20%; text-align: center;">50<br>Moderate extent</span>
-            <span style="width: 20%; text-align: center;">75<br>Large extent</span>
-            <span style="width: 20%; text-align: center;">100<br>Very large extent</span>
+        <div class="slider-container">
+          <input type="range" min="1" max="100" value="1" step="1" id="slider">
+          <div class="slider-labels">
+            <span class="label">1<br>Very small extent</span>
+            <span class="label">25<br>Small extent</span>
+            <span class="label">50<br>Moderate extent</span>
+            <span class="label">75<br>Large extent</span>
+            <span class="label">100<br>Very large extent</span>
           </div>
         </div>
       </div>`;
