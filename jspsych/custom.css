@@ -30,18 +30,26 @@
   width: 100%;
 }
 
-#slider {
+.jspsych-html-slider-response-container {
+  position: relative;
+}
+
+.jspsych-html-slider-response-stimulus {
+  margin-bottom: 20px;
+}
+
+.jspsych-html-slider-response-slider {
   width: 100%;
 }
 
-.slider-labels {
+.jspsych-html-slider-response-label-container {
   display: flex;
   justify-content: space-between;
   position: relative;
   top: -25px; /* Adjust this value as necessary */
 }
 
-.slider-labels .label {
+.jspsych-html-slider-response-label {
   width: 20%;
   text-align: center;
 }

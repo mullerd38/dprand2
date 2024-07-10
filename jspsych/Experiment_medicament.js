@@ -204,7 +204,7 @@ var slider = {
   max: 100,
   step: 1,
   labels: ['1', '25', '50', '75', '100'], // Placeholder labels for spacing
-  stimulus: function() {
+  prompt: function() {
     var response = jsPsych.data.get().last().values()[0].response.Q0;
     var questionText = "";
     if (response == "Patients have a better chance of recovery with the medicine") {
@@ -214,21 +214,7 @@ var slider = {
     } else {
       questionText = "Erreur : réponse inattendue.";
     }
-
-    return `
-      <div>
-        <p>${questionText}</p>
-        <div class="slider-container">
-          <input type="range" min="1" max="100" value="1" step="1" id="slider">
-          <div class="slider-labels">
-            <span class="label">1<br>Very small extent</span>
-            <span class="label">25<br>Small extent</span>
-            <span class="label">50<br>Moderate extent</span>
-            <span class="label">75<br>Large extent</span>
-            <span class="label">100<br>Very large extent</span>
-          </div>
-        </div>
-      </div>`;
+    return `<p>${questionText}</p>`;
   }
 };
 
