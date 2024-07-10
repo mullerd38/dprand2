@@ -203,7 +203,7 @@ var slider = {
   min: 1,
   max: 100,
   step: 1,
-  labels: [], // We will handle labels manually in the HTML below
+  labels: ['1', '25', '50', '75', '100'], // Placeholder labels for spacing
   stimulus: function(){
     var response = jsPsych.data.get().last().values()[0].response.Q0;
     var questionText = "";
@@ -220,17 +220,18 @@ var slider = {
         <p>${questionText}</p>
         <div class="slider-container" style="position: relative; width: 100%;">
           <input type="range" min="1" max="100" value="1" step="1" id="slider" style="width: 100%;">
-          <div style="display: flex; justify-content: space-between; position: relative; top: -20px;">
-            <span>1<br>Very small extent</span>
-            <span>25<br>Small extent</span>
-            <span>50<br>Moderate extent</span>
-            <span>75<br>Large extent</span>
-            <span>100<br>Very large extent</span>
+          <div style="display: flex; justify-content: space-between; position: relative; top: -25px;">
+            <span style="width: 20%; text-align: center;">1<br>Very small extent</span>
+            <span style="width: 20%; text-align: center;">25<br>Small extent</span>
+            <span style="width: 20%; text-align: center;">50<br>Moderate extent</span>
+            <span style="width: 20%; text-align: center;">75<br>Large extent</span>
+            <span style="width: 20%; text-align: center;">100<br>Very large extent</span>
           </div>
         </div>
       </div>`;
   }
-}
+};
+
 
 var conditional_slider = {
   timeline: [slider],
