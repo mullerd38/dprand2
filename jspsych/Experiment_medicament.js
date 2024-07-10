@@ -1,6 +1,6 @@
 // LICENCE -----------------------------------------------------------------------------
 
-// Copyright 2023 - Maude Tagand
+// Copyright 2024 - Maude Tagand & Dominique Muller
 
 // Initialize jsPsych -----------------------------------------------------------------
 var jsPsych = initJsPsych({
