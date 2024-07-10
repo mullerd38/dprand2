@@ -203,22 +203,32 @@ var slider = {
   min: 1,
   max: 100,
   step: 1,
-  labels: [
-    '1<br>Very small extent', 
-    '25<br>Small extent', 
-    '50<br>Moderate extent', 
-    '75<br>Large extent', 
-    '100<br>Very large extent'
-  ],
+  labels: [], // We will handle labels manually in the HTML below
   stimulus: function(){
     var response = jsPsych.data.get().last().values()[0].response.Q0;
+    var questionText = "";
     if (response == "Patients have a better chance of recovery with the medicine"){
-      return "<p>To what extent do you think that people are more likely to get better with the medicine.</p>";
+      questionText = "To what extent do you think that people are more likely to get better with the medicine.";
     } else if (response == "Patients have a better chance of recovery with the placebo") {
-      return "<p>To what extent do you think that people are more likely to get better with the placebo.</p>";
+      questionText = "To what extent do you think that people are more likely to get better with the placebo.";
     } else {
-      return "<p>Erreur : réponse inattendue.</p>";
+      questionText = "Erreur : réponse inattendue.";
     }
+
+    return `
+      <div>
+        <p>${questionText}</p>
+        <div class="slider-container" style="position: relative; width: 100%;">
+          <input type="range" min="1" max="100" value="1" step="1" id="slider" style="width: 100%;">
+          <div style="display: flex; justify-content: space-between; position: relative; top: -20px;">
+            <span>1<br>Very small extent</span>
+            <span>25<br>Small extent</span>
+            <span>50<br>Moderate extent</span>
+            <span>75<br>Large extent</span>
+            <span>100<br>Very large extent</span>
+          </div>
+        </div>
+      </div>`;
   }
 }
 
