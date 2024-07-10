@@ -195,6 +195,7 @@ var question = {
   }
 ]
 }
+
 var slider = {
   type: jsPsychHtmlSliderResponse,
   slider_start: 1,
@@ -202,7 +203,7 @@ var slider = {
   min: 1,
   max: 100,
   step: 1,
-  labels: ['1', '25', '50', '75', '100'], // Placeholder labels for spacing
+  labels: ['1', '25', '50', '75', '100'],
   stimulus: function() {
     var response = jsPsych.data.get().last().values()[0].response.Q0;
     var questionText = "";
@@ -216,16 +217,6 @@ var slider = {
 
     return `<div class="slider-container">
               <p>${questionText}</p>
-              <div class="jspsych-html-slider-response-container">
-                <input type="range" min="1" max="100" value="1" step="1" id="slider" class="jspsych-html-slider-response-slider">
-                <div class="jspsych-html-slider-response-label-container">
-                  <span class="jspsych-html-slider-response-label">1<br>Very small extent</span>
-                  <span class="jspsych-html-slider-response-label">25<br>Small extent</span>
-                  <span class="jspsych-html-slider-response-label">50<br>Moderate extent</span>
-                  <span class="jspsych-html-slider-response-label">75<br>Large extent</span>
-                  <span class="jspsych-html-slider-response-label">100<br>Very large extent</span>
-                </div>
-              </div>
             </div>`;
   }
 };
@@ -241,6 +232,7 @@ var conditional_slider = {
     }
   }
 };
+
 
 //question certi
 var confidence = {
