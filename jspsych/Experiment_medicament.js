@@ -203,7 +203,13 @@ var slider = {
   min: 1,
   max: 100,
   step: 1,
-  labels: ['1<br>Very small extent', '100<br>Very large extent'],
+  labels: [
+    '1<br>Very small extent', 
+    '25<br>Small extent', 
+    '50<br>Moderate extent', 
+    '75<br>Large extent', 
+    '100<br>Very large extent'
+  ],
   stimulus: function(){
     var response = jsPsych.data.get().last().values()[0].response.Q0;
     if (response == "Patients have a better chance of recovery with the medicine"){
