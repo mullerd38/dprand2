@@ -423,7 +423,7 @@ var prolific = {
 var prolific_id = jsPsych.data.getURLVariable('PROLIFIC_PID');
 var study_id = jsPsych.data.getURLVariable('STUDY_ID');
 var session_id = jsPsych.data.getURLVariable('SESSION_ID');
-          
+
 //Save data ---------------------------------------------------------------------------------
 const subject_id = jsPsych.randomization.randomID(10);
 const filename = `${subject_id}.csv`;
