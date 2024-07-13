@@ -263,7 +263,7 @@ var attention_check = {
   button_label: 'Continue',
 }
 
-
+/*
 
 //Survey
 var instruction_questionnary = {
@@ -318,7 +318,7 @@ var gihs_label = [
   "<br>Very true of me", 
   "<br>Extremely true of me"
 ];
-
+   
 var gihs_questionnary = {
   type: jsPsychSurveyLikert,
   preamble:
@@ -347,6 +347,8 @@ var questionnary = {
     }
   })()
 }
+*/
+
 
 var instruction_demographic_questionnary = {
   type: jsPsychHtmlKeyboardResponse,
