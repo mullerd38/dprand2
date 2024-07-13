@@ -427,7 +427,7 @@ var session_id = jsPsych.data.getURLVariable('SESSION_ID');
 //Save data ---------------------------------------------------------------------------------
 const subject_id = jsPsych.randomization.randomID(10);
 const filename = `${subject_id}.csv`;
-const experiment_id = "hRKBXdQMgnvz";
+const experiment_id = "RrGG2ORSPpVt";
 // Your OSF token
 // const osfToken = 'VLFG5mbOACd0fk6jkN1IhAwbdrCi8OSm62rzTqPBreN3asR5QCcIeTBz9YkwJy1WL9CkNp';
 
