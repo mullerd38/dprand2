@@ -463,8 +463,6 @@ timeline.push
   conditional_slider,
   confidence,
   attention_check,
-  //instruction_questionnary,
-  //questionnary,
   instruction_demographic_questionnary,
   genre,
   age,
